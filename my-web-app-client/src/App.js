@@ -13,7 +13,6 @@ function App() {
     event.preventDefault();
 
     try {
-      // Send user input to the backend and get a response from the OpenAI API
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
@@ -29,7 +28,6 @@ function App() {
       console.error('Error:', error);
     }
 
-    // Clear the input field
     setUserInput('');
   };
 
